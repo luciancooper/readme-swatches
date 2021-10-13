@@ -1,0 +1,57 @@
+{
+  "name": "readme-swatches",
+  "version": "1.0.0",
+  "description": "Readme color swatch api",
+  "keywords": [
+    "readme",
+    "color",
+    "swatch"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "start": "vercel dev"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "author": "Lucian Cooper <cooperlucian@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciancooper/readme-swatches.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@lcooper"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "@lcooper/eslint-config-typescript",
+    "parserOptions": {
+      "project": "tsconfig.json"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@lcooper/commitlint-config": "^1.1.0",
+    "@lcooper/eslint-config-typescript": "^1.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vercel/node": "^1.12.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-import": "^2.25.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.2.3",
+    "typescript": "^4.4.4",
+    "vercel": "^23.1.2"
+  }
+}
