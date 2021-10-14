@@ -23,10 +23,10 @@ export default function endpoint(req: VercelRequest, res: VercelResponse) {
     const color = parseColor(queryValue(req.query['color']!)) ?? '#000000',
         style = resolveStyle(queryValue(req.query['style'] ?? 'square').toLowerCase(), 'square'),
         size = Number(queryValue(req.query['size'] ?? '20')),
-        top = Number(queryValue(req.query['top'] ?? req.query['y'] ?? '0')),
-        bottom = Number(queryValue(req.query['bottom'] ?? req.query['y'] ?? '2')),
-        left = Number(queryValue(req.query['left'] ?? req.query['x'] ?? '0')),
-        right = Number(queryValue(req.query['right'] ?? req.query['x'] ?? '0')),
+        top = Number(queryValue(req.query['top'] ?? req.query['t'] ?? '0')),
+        bottom = Number(queryValue(req.query['bottom'] ?? req.query['b'] ?? '2')),
+        left = Number(queryValue(req.query['left'] ?? req.query['l'] ?? '0')),
+        right = Number(queryValue(req.query['right'] ?? req.query['r'] ?? '0')),
         width = left + size + right,
         height = top + size + bottom;
     // create swatch shape
