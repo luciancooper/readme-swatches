@@ -17,7 +17,7 @@ export default function endpoint(req: VercelRequest, res: VercelResponse) {
     const color = parseColor(queryValue(req.query['color']!)) ?? '#000000',
         size = Number(queryValue(req.query['size'] ?? '20')),
         top = Number(queryValue(req.query['top'] ?? req.query['y'] ?? '0')),
-        bottom = Number(queryValue(req.query['bottom'] ?? req.query['y'] ?? '0')),
+        bottom = Number(queryValue(req.query['bottom'] ?? req.query['y'] ?? '2')),
         left = Number(queryValue(req.query['left'] ?? req.query['x'] ?? '0')),
         right = Number(queryValue(req.query['right'] ?? req.query['x'] ?? '0')),
         radius = Number(queryValue(req.query['r'] ?? req.query['radius'] ?? '0')),
